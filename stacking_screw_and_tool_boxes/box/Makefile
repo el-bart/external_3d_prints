@@ -11,7 +11,7 @@ all: $(GCODES)
 $(STLS) $(SCADS) $(GCODES): Makefile $(CONFIG)
 
 %.gcode: %.stl
-	slic3r --load "$(CONFIG)" "$<"
+	slic3r --load "$(CONFIG)" --rotate 90 "$<"
 
 %.stl: %.scad
 	openscad -o "$@" "$<"

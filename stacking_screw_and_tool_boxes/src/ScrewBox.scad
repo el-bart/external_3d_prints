@@ -8,7 +8,8 @@ straightSide=false;
 
 slopeSections=4;
 
-screwBox();
+rotate([0,0,90])
+  screwBox();
 
 module screwBox() {
 	difference() {
@@ -52,5 +53,3 @@ module screwBox() {
 		}
 	}
 }
-
-

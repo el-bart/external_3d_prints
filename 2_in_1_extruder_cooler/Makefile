@@ -1,7 +1,7 @@
 .SECONDARY:
 
 SCADS  := $(wildcard *.scad)
-STLS   := $(SCADS:.scad=.stl)
+STLS   := $(wildcard *.stl) $(SCADS:.scad=.stl)
 GCODES := $(STLS:.stl=.gcode)
 CONFIG := $(wildcard *.ini)
 
@@ -15,6 +15,10 @@ $(STLS) $(SCADS) $(GCODES): Makefile $(CONFIG)
 
 %.stl: %.scad
 	openscad -o "$@" "$<"
+
+.PHONY: time
+time: $(GCODES)
+	@for gcode in $(sort $(GCODES)) ; do echo "### $${gcode}:" ; gcoder "$$gcode" ; echo '\n\n' ; done
 
 .PHONY: clean
 clean:

@@ -13,7 +13,7 @@ all: $(GCODES)
 $(STLS) $(SCADS) $(GCODES) $(TIMES): Makefile $(CONFIG)
 
 %.gcode: %.stl
-	slic3r --load "$(CONFIG)" "$<"
+	slic3r --load "$(CONFIG)" --scale 2 "$<"
 
 %.stl: %.scad
 	openscad -o "$@" "$<"

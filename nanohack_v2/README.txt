@@ -1,1 +1,0 @@
-NanoHack V2: COVID-19 Face Mask  by ericinventor on Thingiverse: https://www.thingiverse.com/thing:4243820

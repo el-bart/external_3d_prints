@@ -1,7 +1,8 @@
 .SECONDARY:
 
 SCADS  := $(wildcard *.scad)
-STLS   := $(wildcard *.stl) $(SCADS:.scad=.stl)
+#STLS   := $(wildcard *.stl) $(SCADS:.scad=.stl)
+STLS   := $(SCADS:.scad=.stl)
 STLS   := $(sort $(STLS))  # remove duplicates
 GCODES := $(STLS:.stl=.gcode)
 TIMES  := $(GCODES:.gcode=.time)

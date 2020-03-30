@@ -9,13 +9,13 @@ module top()
     hull()
     {
       for(dx = [-1:+1])
-        translate([dx*(70-10/2)/2, 0, 0])
+        translate([dx*(60-10/2)/2, 0, 0])
           cylinder(r=10/2, h=2);
     }
     hull()
     {
       for(dy = [-1:+1])
-        translate([0, dy*(70-10/2)/2, 0])
+        translate([0, dy*(60-10/2)/2, 0])
           cylinder(r=10/2, h=2);
     }
   }
@@ -23,5 +23,5 @@ module top()
 
 for(x = [0:1])
   for(y = [0:1])
-    translate([x*46, y*78+(sig(x)*70/2), 0])
+    translate([x*40, y*70+(sig(x)*70/2), 0])
       top();

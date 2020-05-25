@@ -1,3 +1,5 @@
+use <cone.scad>
+
 module support()
 {
   difference()
@@ -39,7 +41,7 @@ import("ascent.stl");
 translate([70, 0, 0])
   import("descent.stl");
 
-translate([50, -55, 0])
+translate([40, -55, 0])
   plate();
 
 translate([110, -20, 0])
@@ -49,3 +51,6 @@ translate([110, -20, 0])
     mirror([1,0, 0])
       support();
 }
+
+translate([120,-50,0])
+  cone();

@@ -1,6 +1,6 @@
 .SECONDARY:
 
-SCADS  := apollo_mariusz.scad # $(wildcard *.scad)
+SCADS  := apollo_mariusz.scad cone.scad # $(wildcard *.scad)
 STLS   := $(SCADS:.scad=.stl)
 #STLS   := ascent.stl descent.stl
 STLS   := $(sort $(STLS))  # remove duplicates

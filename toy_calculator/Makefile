@@ -8,7 +8,10 @@ TIMES  := $(GCODES:.gcode=.time)
 CONFIG := $(wildcard *.ini)
 
 .PHONY: all
-all: $(GCODES)
+all: time gcode
+
+.PHONY: gcode
+gcode: $(GCODES)
 
 $(STLS) $(SCADS) $(GCODES) $(TIMES): Makefile $(CONFIG)
 
@@ -27,4 +30,4 @@ time: $(TIMES)
 
 .PHONY: clean
 clean:
-	rm -fv $(GCODES) $(SCADS:.scad=.stl)
+	rm -fv $(GCODES) $(SCADS:.scad=.stl) $(TIMES)

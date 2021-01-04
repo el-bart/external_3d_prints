@@ -1,4 +1,4 @@
-include <lib/util.scad>
+include <detail/util.scad>
 
 mil = 25.4/1000;
 

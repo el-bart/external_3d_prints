@@ -1,4 +1,4 @@
-use <cone.scad>
+use <detail/cone.scad>
 
 module support()
 {
@@ -37,9 +37,9 @@ module plate()
 }
 
 
-import("ascent.stl");
+import("detail/ascent.stl");
 translate([70, 0, 0])
-  import("descent.stl");
+  import("detail/descent.stl");
 
 translate([40, -55, 0])
   plate();

@@ -1,6 +1,6 @@
 module whale()
 {
-  import("model/whale.stl");
+  import("whale.stl");
 }
 
 module half_whale()

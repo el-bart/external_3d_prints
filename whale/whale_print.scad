@@ -6,7 +6,7 @@ module whale()
 module half_whale()
 {
   rotate([0, 90, 0])
-    if(1)
+    if(0)
     {
       // this model is NOT on the repo, but can be easily recreated
       // from original one, bith code below. conveninet for testing.

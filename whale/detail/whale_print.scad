@@ -10,7 +10,7 @@ module half_whale()
     {
       // this model is NOT on the repo, but can be easily recreated
       // from original one, bith code below. conveninet for testing.
-      import("model/half_whale.stl");
+      import("half_whale.stl");
     }
     else
     {

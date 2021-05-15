@@ -22,10 +22,3 @@ module half_whale()
       }
     }
 }
-
-
-half_whale();
-translate([150, -30, 0])
-  rotate([0, 0, 180])
-    mirror([0, 1, 0])
-      half_whale();

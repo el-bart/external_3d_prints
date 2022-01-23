@@ -2,7 +2,7 @@ module body() {
     translate([1, 1, 1]) {
         minkowski() {
             $fn=16;
-            cube([72, 34, 7]);
+            cube([72, 34, 1]);
             sphere(r=2);
         }
     }
@@ -29,7 +29,7 @@ numbers = [
     
     for(i = [0:2]) {
         for(j = [1:4]) {
-            translate([28+j*(taille+espacement), 7+i*(taille+espacement), 7]) {
+            translate([28+j*(taille+espacement), 7+i*(taille+espacement), 1]) {
                 difference() {
                     cube([taille, taille, 3]);
                     translate([5.7, 1.5, 2.5]) {
@@ -50,10 +50,10 @@ numbers = [
 module phone() {
     difference() {
         body();
-        translate([3.5, 3.5, 9.5]) {
+        translate([3.5, 3.5, 3.5]) {
             cube([30, 30, 5]);
         }
-        translate([35, 5.5, 9.5]) {
+        translate([35, 5.5, 3.5]) {
             cube([35, 26, 5]);
         }
     }

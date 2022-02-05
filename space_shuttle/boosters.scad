@@ -1,3 +1,6 @@
 include<detail/config.scad>
+
 scale(scale_factor)
-  import("in/Booster_Single.stl");
+  for(dx=[0:1])
+    translate([0, dx*32, 0])
+      import("in/Booster_Single.stl");

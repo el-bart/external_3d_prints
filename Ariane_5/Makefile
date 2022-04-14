@@ -72,7 +72,8 @@ gcode: $(GCODES) $(MD5S)
 
 build/$(FILAMENT)/%.gcode: build/%.stl build/$(FILAMENT)/config.ini Makefile
 	$(SILENT)echo "SLICER $(FILAMENT)/$(notdir $<)"
-	$(SILENT)prusa-slicer --load "build/$(FILAMENT)/config.ini" --export-gcode --output "$@" "$<" > "$@.log"
+	#$(SILENT)prusa-slicer --load "build/$(FILAMENT)/config.ini" --export-gcode --output "$@" "$<" > "$@.log"
+	$(SILENT)slic3r --load "build/$(FILAMENT)/config.ini" --output "$@" "$<" > "$@.log"
 
 
 .PHONY: time

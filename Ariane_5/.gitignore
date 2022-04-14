@@ -1,9 +1,1 @@
-# vim
-*.swp
-*.swo
-
-# kwrite
-*.kate-swp
-
-# git
-*.orig
+build/*

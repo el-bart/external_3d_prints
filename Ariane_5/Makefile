@@ -22,10 +22,10 @@ SCAD_FLAGS+=--check-parameter-ranges true
 
 
 .PHONY: all
-all: pla petg tpu
+all: pla petg tpu silk
 
-.PHONY: pla petg tpu
-pla petg tpu:
+.PHONY: pla petg tpu silk
+pla petg tpu silk:
 	$(SILENT)+$(MAKE) FILAMENT=$@ time gcode md5
 
 build/%.stl: %.scad Makefile
@@ -71,7 +71,7 @@ build/$(FILAMENT)/config.ini: config/$(FILAMENT)/template.ini config/$(FILAMENT)
 gcode: $(GCODES) $(MD5S)
 
 build/$(FILAMENT)/%.gcode: build/%.stl build/$(FILAMENT)/config.ini Makefile
-	$(SILENT)echo "SLIC3R $(FILAMENT)/$(notdir $<)"
+	$(SILENT)echo "SLICER $(FILAMENT)/$(notdir $<)"
 	$(SILENT)prusa-slicer --load "build/$(FILAMENT)/config.ini" --export-gcode --output "$@" "$<" > "$@.log"
 
 

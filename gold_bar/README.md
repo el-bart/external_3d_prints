@@ -1,3 +1,3 @@
 # gold bar
 
-from [thingiverse](https://www.thingiverse.com/thing:1655923).
+from [thingiverse](https://www.thingiverse.com/thing:3517527).

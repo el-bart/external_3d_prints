@@ -1,6 +1,6 @@
 module gear()
 {
-  import("one_gear_no_center.stl");
+  import("models/one_gear_no_center.stl");
   for(i=[-1,+1])
     translate([-22, -13.5*i, 0])
       cylinder(r=6, h=6.25);
@@ -10,7 +10,7 @@ module mount()
 {
   difference()
   {
-    import("arms2_single.stl");
+    import("models/arms2_single.stl");
     translate([0,-35,3.2])
       cube([20,70,10]);
     for(i=[-1, +1])

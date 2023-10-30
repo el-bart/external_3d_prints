@@ -31,9 +31,9 @@ module bar()
     cylinder(d=6, h=3);
     translate([0, 0, 3])
     {
-      cylinder(d1=6, d2=3, h=2);
+      cylinder(d1=6, d2=3.2, h=2);
       translate([0, 0, 2])
-        cylinder(d=3, h=4);
+        cylinder(d=3.2, h=4);
     }
   }
 

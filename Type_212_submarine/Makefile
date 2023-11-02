@@ -78,6 +78,7 @@ build/$(PRINTER_3D)/$(FILAMENT)/$(MODE)/%.gcode: \
 			--load "$$(echo "$@" | sed 's/\.gcode$$/.ini/')" \
 			--export-gcode \
 			--output "$@" \
+			--scale 0.5 \
 			--duplicate "$(COPIES)" \
 			"$<" \
 			> "$@.log" 2>&1 || { cat "$@.log" ; exit 2 ; }

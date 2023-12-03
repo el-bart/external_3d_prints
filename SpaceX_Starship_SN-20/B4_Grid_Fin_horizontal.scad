@@ -19,10 +19,17 @@ module fin_grid_profile_()
 
 module fin()
 {
-  intersection()
+  difference()
   {
-    fin_input_();
-    cube([20, 20, 20]);
+    // remove bottom part of mount cylinder
+    intersection()
+    {
+      fin_input_();
+      cube([20, 20, 20]);
+    }
+    // remove grid teeth - too small to be printed reasonably anyway...
+    translate([0, 0, 2.5])
+      cube([20, 14.05, 10]);
   }
   // equalize bottom part
   linear_extrude(1)

@@ -76,6 +76,7 @@ build/$(PRINTER_3D)/$(FILAMENT)/$(MODE)/%.gcode: \
 	$(SILENT)echo "SLICE $(notdir $<) ($(PRINTER_3D)/$(FILAMENT)/$(MODE), N=$(COPIES))"
 	$(SILENT)prusa-slicer \
 			--load "$$(echo "$@" | sed 's/\.gcode$$/.ini/')" \
+			--scale 20 \
 			--export-gcode \
 			--output "$@" \
 			--duplicate "$(COPIES)" \

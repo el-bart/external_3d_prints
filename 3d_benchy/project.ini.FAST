@@ -1,0 +1,32 @@
+# default: 50%
+#external_perimeter_speed = 100%
+# default: 200
+#perimeter_speed = 500
+# default: 40
+#small_perimeter_speed = 140
+# default 4k
+perimeter_acceleration = 7000
+# default: everywhere
+#scarf_seam_placement = nowhere
+# default: 20
+#scarf_seam_length = 0
+# default 60
+bridge_speed = 160
+# default: 30%
+first_layer_speed = 100%
+
+# default: 40
+#min_print_speed = 100
+# default: 10
+slowdown_below_layer_time = 0
+
+# default: 3k
+bridge_acceleration = 7000
+
+# default: 2k
+first_layer_acceleration = 7000
+
+# default: 1.5k
+machine_max_acceleration_extruding = 10000
+# default: 1.5k
+machine_max_acceleration_retracting = 5000

@@ -1,3 +1,5 @@
+use <key_stiffener.scad>
+
 translate([0, 0, 3])
   import("body_a.stl");
 
@@ -24,3 +26,6 @@ translate([-65, 0, 4])
 
 translate([0, -110, -0.2])
   import("shackle.stl");
+
+translate([40, 20, 0])
+  key_stiffener();

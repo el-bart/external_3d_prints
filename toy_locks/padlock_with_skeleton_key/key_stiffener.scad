@@ -8,7 +8,7 @@ d_ext = d_int + 2*wall;
 d_h = 10;
 tooth_size = [2.25, 6.85, 5.10] + spacing*[2,2,1];
 
-module stiffener()
+module key_stiffener()
 {
   module holder_profile_2d()
   {
@@ -58,4 +58,4 @@ module stiffener()
 }
 
 
-stiffener();
+key_stiffener();

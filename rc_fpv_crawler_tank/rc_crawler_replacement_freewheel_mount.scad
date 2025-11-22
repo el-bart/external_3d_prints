@@ -3,7 +3,7 @@ include <m3d/all.scad>
 module freewheel_mount()
 {
   d_ext = 30.5 - 2*2.5;
-  d_int = 14.8 - 2*1;
+  d_int = 14.8 - 2*0.5;
   h = (21.6 + 1)/2;
   $fn=fn(60);
 

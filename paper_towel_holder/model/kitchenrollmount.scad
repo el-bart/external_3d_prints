@@ -75,7 +75,7 @@ module handle() {
     }
 }
 
-module screw(r0=2.5/2, r1=5.8/2, r2=10/2) {
+module screw(r0=(3.6+0.5)/2, r1=(8+1)/2, r2=14/2) {
     translate([0,0,0]) union() {
         translate([0,0,-50]) cylinder(h=100, r=r0);
         translate([0,0,0]) cylinder(h=r1-r0, r1=r0, r2=r1);

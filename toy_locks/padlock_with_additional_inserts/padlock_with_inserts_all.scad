@@ -1,4 +1,4 @@
-use <core_lightning_fixed.scad>
+use <detail/core_expender.scad>
 use <body1_fixed.scad>
 
 available = [
@@ -10,7 +10,7 @@ available = [
   "triangle"
 ];
 
-model = available[0];
+model = available[3];
 
 module key()
 {
@@ -21,12 +21,8 @@ module key()
 
 module core()
 {
-  translate([0, -28, 34.5])
-    rotate([-90, 0, 0])
-    if(model == "lightning")
-      core_lightning_fixed();
-    else
-      import( str("models/core_", model, ".stl") );
+  core_expander_position()
+    core_expander(model);
 }
 
 

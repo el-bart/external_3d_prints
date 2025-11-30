@@ -1,4 +1,4 @@
-use <body1_fixed.scad>
+use <detail/body1_fixed.scad>
 
 translate([0, 0, 0])
   body1_fixed();

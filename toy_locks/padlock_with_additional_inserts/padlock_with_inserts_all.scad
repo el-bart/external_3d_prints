@@ -41,5 +41,4 @@ translate([45, 0, -5.5])
   import("models/shackle.stl");
 
 core();
-
 key();

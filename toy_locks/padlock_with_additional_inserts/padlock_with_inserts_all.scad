@@ -10,7 +10,7 @@ available = [
   "triangle"
 ];
 
-model = available[2];
+model = available[0];
 
 module key()
 {

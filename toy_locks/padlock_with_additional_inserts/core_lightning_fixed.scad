@@ -1,21 +1,4 @@
-module core_lightning_fixed()
-{
-  difference()
-  {
-    hull()
-    {
-      import("models/core_lightning.stl");
-    }
-    translate([0, -0.3, 0])
-      minkowski()
-      {
-        import("models/key_lightning.stl");
-        sphere(r=0.3, $fn=10);
-      }
-  }
-}
+use <detail/core_expender.scad>
 
-
-translate([0, -28, 34.5])
-  rotate([-90, 0, 0])
-  core_lightning_fixed();
+core_expander_position()
+  core_expander("lightning");

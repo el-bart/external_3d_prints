@@ -1,4 +1,5 @@
 use <core_lightning_fixed.scad>
+use <body1_fixed.scad>
 
 available = [
   "diamond",
@@ -30,7 +31,7 @@ module core()
 
 
 translate([0, 0, 0])
-  import("models/body1.stl");
+  body1_fixed();
 
 translate([0, 0, 25])
   rotate([0, 180, 0])

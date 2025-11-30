@@ -14,7 +14,7 @@ model = available[2];
 module key()
 {
   translate([45, -5, -10.6])
-    import( str("key_", model, ".stl") );
+    import( str("models/key_", model, ".stl") );
 }
 
 
@@ -25,19 +25,19 @@ module core()
     if(model == "lightning")
       core_lightning_fixed();
     else
-      import( str("core_", model, ".stl") );
+      import( str("models/core_", model, ".stl") );
 }
 
 
 translate([0, 0, 0])
-  import("body1.stl");
+  import("models/body1.stl");
 
 translate([0, 0, 25])
   rotate([0, 180, 0])
-  import("body2.stl");
+  import("models/body2.stl");
 
 translate([45, 0, -5.5])
-  import("shackle.stl");
+  import("models/shackle.stl");
 
 core();
 

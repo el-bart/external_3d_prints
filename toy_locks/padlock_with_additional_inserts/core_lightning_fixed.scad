@@ -4,12 +4,12 @@ module core_lightning_fixed()
   {
     hull()
     {
-      import("core_lightning.stl");
+      import("models/core_lightning.stl");
     }
     translate([0, -0.3, 0])
       minkowski()
       {
-        import("key_lightning.stl");
+        import("models/key_lightning.stl");
         sphere(r=0.3, $fn=10);
       }
   }

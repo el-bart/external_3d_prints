@@ -1,4 +1,4 @@
-module body2_fixed()
+module body1_fixed()
 {
   extra_depth = 1;
   spacing_r = 0.3;
@@ -48,4 +48,4 @@ module body2_fixed()
 }
 
 
-body2_fixed();
+body1_fixed();

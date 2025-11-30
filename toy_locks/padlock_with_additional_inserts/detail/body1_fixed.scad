@@ -7,7 +7,7 @@ module body1_fixed()
   {
     difference()
     {
-      import("models/body2.stl");
+      import("../models/body2.stl");
       translate([-10, -10, 12.5])
         cube([100, 100, 100]);
     }
@@ -41,7 +41,7 @@ module body1_fixed()
 
   difference()
   {
-    import("models/body1.stl");
+    import("../models/body1.stl");
     translate([0, 0, -extra_depth])
       pins_slots_large_long();
   }

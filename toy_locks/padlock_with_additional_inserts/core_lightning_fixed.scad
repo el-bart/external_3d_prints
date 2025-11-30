@@ -1,21 +1,21 @@
-module key_slot()
+module core_lightning_fixed()
 {
-  module key_center()
+  difference()
   {
-    translate([-25, -5, -10.6])
-      import("key_lightning.stl");
+    hull()
+    {
+      import("core_lightning.stl");
+    }
+    translate([0, -0.3, 0])
+      minkowski()
+      {
+        import("key_lightning.stl");
+        sphere(r=0.3, $fn=10);
+      }
   }
-
-    key_center();
-  offset(delta=0.3)
-  projection(cut=true)
-    translate([0, 0, -1])
-    rotate([90, 0, 0])
-    key_center();
 }
 
-key_slot();
 
-  translate([0, -28, 34.5])
-    rotate([-90, 0, 0])
-    import("core_lightning.stl");
+translate([0, -28, 34.5])
+  rotate([-90, 0, 0])
+  core_lightning_fixed();

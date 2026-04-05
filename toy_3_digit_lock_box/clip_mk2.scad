@@ -2,7 +2,7 @@ include <m3d/all.scad>
 
 h = 1.0;
 l = 11;
-side = 2.8;
+side = 2.7;
 spring = 1.2;
 hook = 2;
 delta = 1.3;

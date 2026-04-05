@@ -1,26 +1,26 @@
 include <m3d/all.scad>
 
-h = 1.2;
+h = 1.0;
 l = 11;
-side = 3;
-spring = 0.8;
+side = 2.5;
+spring = 1.1;
 hook = 2;
-delta = (side-1.5);
+delta = 1.3;
 
 
 module clip_mk2()
 {
   // top and bottom
   for(dy=[0, l-hook])
-    translate([-side, dy, 0])
-      render()
-        difference()
-        {
+    render()
+      difference()
+      {
+        translate([-side, dy, 0])
           cube([2*side, hook, h]);
-          if(dy!=0)
-            translate([delta, 0, 0])
-              cube([2*delta, hook, h]);
-        }
+        if(dy!=0)
+          translate([-delta, dy, 0])
+            cube([2*delta, hook, h]);
+      }
   // side arms
   for(dx=[-1,+1])
     translate([dx*delta, 0, 0] - [spring/2, 0, 0])

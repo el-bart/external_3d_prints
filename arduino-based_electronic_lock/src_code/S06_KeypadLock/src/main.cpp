@@ -24,8 +24,9 @@ char keymap[KEYPAD_ROWS][KEYPAD_COLS] = {
 Keypad myKeypad = Keypad(makeKeymap(keymap), rowPins, colPins, KEYPAD_ROWS, KEYPAD_COLS);
 
 // Setup code options
-char code[] = { '1', '2', '3', '4' }; // the correct code - any length
-byte codeLen = 4;                     // length of the correct code
+char const code[] = // the correct code - any length
+  { '1', '2', '3', '4' };
+byte const codeLen = sizeof(code) / sizeof(code[0]);
 byte codePos = 0;                     // cursor for correctly entered code
 
 // Helper method to move servo to given position

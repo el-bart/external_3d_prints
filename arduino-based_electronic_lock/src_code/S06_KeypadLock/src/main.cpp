@@ -5,8 +5,8 @@
 
 // Setup servo
 #define PIN_SERVO 10
-#define SERVO_OPEN 0
-#define SERVO_CLOSED 90
+#define SERVO_OPEN (0+5)
+#define SERVO_CLOSED (90-5)
 Servo myServo;
 int lastPos;
 

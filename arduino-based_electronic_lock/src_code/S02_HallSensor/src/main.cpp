@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #define PIN_HALL A0
 
 void setup() {

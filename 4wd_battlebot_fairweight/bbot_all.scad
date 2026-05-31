@@ -7,7 +7,7 @@ translate([60, 0, 0])
   import("bbot_bottom-plate.stl");
 
 translate([-66, 0, -19])
-import("bbot_top-plate.stl");
+  import("bbot_top-plate.stl");
 
 translate([-150, -210, 0])
   import("bbot_modulhitch.stl");

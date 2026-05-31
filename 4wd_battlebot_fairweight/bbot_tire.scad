@@ -1,4 +1,5 @@
 include <m3d/all.scad>
+use <bbot_wheel-ranglebox.scad>
 
 module tire()
 {
@@ -24,9 +25,11 @@ module tire()
   {
     outer();
     translate([0,0,-eps])
-      cylinder(d=d_ext-4, h=h+2*eps);
+      cylinder(d=d_int, h=h+2*eps);
   }
 }
 
 
 tire();
+%if($preview)
+  wheel();

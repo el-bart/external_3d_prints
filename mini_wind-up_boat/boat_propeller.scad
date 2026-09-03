@@ -20,7 +20,7 @@ module template(dh=eps)
     center_xy(s_out)
       cube(s_out);
     center_xy(s_in)
-      cube(s_in);
+      side_rounded_cube(s_in, rounding, $fn=fn(40));
   }
 }
 
